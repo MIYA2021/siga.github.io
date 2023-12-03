@@ -91,3 +91,4 @@ dropButton.addEventListener('touchstart', (e) => {
 dropButton.addEventListener('dblclick', (e) => {
   e.preventDefault(); // ダブルクリックでのデフォルトの動作を防ぐ
 });
+
