@@ -42,7 +42,7 @@ body {
   position: absolute;
   top: -100px; /* 初期位置を画面外に設定 */
   animation: fall 2s linear forwards;
-  z-index: 3; /* 落下するオブジェクトを土台よりも奥に表示 */
+  z-index: 1; /* 落下するオブジェクトを背景よりも奥に表示 */
 }
 
 @keyframes fall {
