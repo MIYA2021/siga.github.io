@@ -9,7 +9,7 @@ function createFallingObject() {
 
   // 新しい画像を表示するための img 要素を作成
   const fallingObjectImage = document.createElement('img');
-  fallingObjectImage.src = 'new-object.png'; // 新しい画像のファイルパス
+  fallingObjectImage.src = 'https://github.com/MIYA2021/siga.github.io/blob/main/new-object.png?raw=true'; // 新しい画像のファイルパス
   fallingObjectImage.alt = 'falling object';
   fallingObject.appendChild(fallingObjectImage);
 
