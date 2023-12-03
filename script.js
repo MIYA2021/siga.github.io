@@ -5,7 +5,6 @@ let rotation = 0;
 let fallingObject = null;
 
 function createFallingObject() {
-  // 画面上に既にオブジェクトがあれば生成しない
   if (fallingObject) {
     return;
   }
@@ -13,16 +12,14 @@ function createFallingObject() {
   fallingObject = document.createElement('div');
   fallingObject.className = 'falling-object';
 
-  // 新しい画像を表示するための img 要素を作成
   const fallingObjectImage = document.createElement('img');
-  fallingObjectImage.src = 'https://github.com/MIYA2021/siga.github.io/blob/main/new-object.png?raw=true'; // 新しい画像のファイルパス
+  fallingObjectImage.src = 'new-object.png'; // 新しい画像の相対パス
   fallingObjectImage.alt = 'falling object';
   fallingObject.appendChild(fallingObjectImage);
 
   fallingObjectContainer.appendChild(fallingObject);
 
   fallingObject.addEventListener('animationend', () => {
-    // アニメーションが終了したら、現在の物を削除
     fallingObjectContainer.removeChild(fallingObject);
     fallingObject = null;
   });
@@ -30,11 +27,9 @@ function createFallingObject() {
   return fallingObject;
 }
 
-// 初期物の作成
 createFallingObject();
 
 rotateButton.addEventListener('click', () => {
-  // ボタンで回転
   if (fallingObject) {
     rotation += 15;
     fallingObject.style.transform = `rotate(${rotation}deg)`;
@@ -42,10 +37,8 @@ rotateButton.addEventListener('click', () => {
 });
 
 dropButton.addEventListener('click', () => {
-  // ボタンで落とす
   if (fallingObject) {
     fallingObject.style.animation = 'fall 2s linear forwards';
-    // 新しいオブジェクトを作成
     createFallingObject();
   }
 });
