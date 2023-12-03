@@ -35,7 +35,7 @@ rotateButton.addEventListener('click', () => {
 
 dropButton.addEventListener('click', () => {
   // ボタンで落とす
-  const fallingObject = fallingObjectContainer.lastChild;
+  const fallingObject = createFallingObject(); // 修正：新しいオブジェクトを作成
   fallingObject.style.animation = 'fall 2s linear forwards';
   fallingObject.style.zIndex = '1'; // 土台が一番前に来るように設定
 });
@@ -58,7 +58,7 @@ document.addEventListener('touchmove', (e) => {
 });
 
 document.addEventListener('touchend', () => {
-  const fallingObject = fallingObjectContainer.lastChild;
+  const fallingObject = createFallingObject(); // 修正：新しいオブジェクトを作成
   fallingObject.style.animation = 'fall 2s linear forwards';
   fallingObject.style.zIndex = '1'; // 土台が一番前に来るように設定
 });
