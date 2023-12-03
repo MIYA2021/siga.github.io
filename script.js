@@ -58,15 +58,17 @@ document.addEventListener('dblclick', () => {
 });
 
 document.addEventListener('touchstart', (e) => {
-  const touchY = e.touches[0].clientY;
   if (fallingObject) {
+    // タッチ開始時にオブジェクトの位置を設定
+    const touchY = e.touches[0].clientY;
     fallingObject.style.top = `${touchY}px`;
   }
 });
 
 document.addEventListener('touchmove', (e) => {
-  const touchY = e.touches[0].clientY;
   if (fallingObject) {
+    // タッチ中にオブジェクトの位置を更新
+    const touchY = e.touches[0].clientY;
     fallingObject.style.top = `${touchY}px`;
   }
 });
@@ -91,4 +93,3 @@ dropButton.addEventListener('touchstart', (e) => {
 dropButton.addEventListener('dblclick', (e) => {
   e.preventDefault(); // ダブルクリックでのデフォルトの動作を防ぐ
 });
-
