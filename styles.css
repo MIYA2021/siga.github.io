@@ -88,5 +88,5 @@ body {
   width: 50;
   height: 50%;
   overflow: hidden;
-  z-index: 2; /* 土台を前面に表示 */
+ 
 }
