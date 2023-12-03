@@ -25,7 +25,8 @@ function createFallingObject() {
   return fallingObject;
 }
 
-createFallingObject(); // 初期物の作成
+// 初期物の作成
+createFallingObject();
 
 rotateButton.addEventListener('click', () => {
   // ボタンで回転
