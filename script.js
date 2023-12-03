@@ -35,12 +35,16 @@ rotateButton.addEventListener('click', () => {
 
 dropButton.addEventListener('click', () => {
   // ボタンで落とす
-  fallingObjectContainer.lastChild.style.animation = 'fall 2s linear forwards';
+  const fallingObject = fallingObjectContainer.lastChild;
+  fallingObject.style.animation = 'fall 2s linear forwards';
+  fallingObject.style.zIndex = '1'; // 土台が一番前に来るように設定
 });
 
 document.addEventListener('dblclick', () => {
   // ダブルクリックでアニメーションをリセット
-  fallingObjectContainer.lastChild.style.animation = '';
+  const fallingObject = fallingObjectContainer.lastChild;
+  fallingObject.style.animation = '';
+  fallingObject.style.zIndex = '0'; // 元のz-indexに戻す
 });
 
 document.addEventListener('touchstart', (e) => {
@@ -54,7 +58,9 @@ document.addEventListener('touchmove', (e) => {
 });
 
 document.addEventListener('touchend', () => {
-  fallingObjectContainer.lastChild.style.animation = 'fall 2s linear forwards';
+  const fallingObject = fallingObjectContainer.lastChild;
+  fallingObject.style.animation = 'fall 2s linear forwards';
+  fallingObject.style.zIndex = '1'; // 土台が一番前に来るように設定
 });
 
 rotateButton.addEventListener('touchstart', (e) => {
