@@ -13,7 +13,7 @@ function createFallingObject() {
   fallingObject.className = 'falling-object';
 
   const fallingObjectImage = document.createElement('img');
-  fallingObjectImage.src = 'new-object.png'; // 新しい画像の相対パス
+  fallingObjectImage.src = 'https://github.com/MIYA2021/siga.github.io/blob/main/new-object.png?raw=true'; // 新しい画像の相対パス
   fallingObjectImage.alt = 'falling object';
   fallingObject.appendChild(fallingObjectImage);
 
