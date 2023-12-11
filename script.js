@@ -8,7 +8,7 @@ function createFallingObject() {
   fallingObject.className = 'falling-object';
 
   const fallingObjectImage = document.createElement('img');
-  fallingObjectImage.src = 'https://github.com/MIYA2021/siga.github.io/blob/main/new-object.png?raw=true';
+  fallingObjectImage.src = 'https://github.com/MIYA2021/siga.tower.github.io/blob/main/new-object.png?raw=true';
   fallingObjectImage.alt = 'falling object';
   fallingObject.appendChild(fallingObjectImage);
 
