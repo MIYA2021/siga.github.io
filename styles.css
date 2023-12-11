@@ -7,6 +7,7 @@ body {
   margin: 0;
   overflow: hidden; /* 画面外の要素を表示しない */
   background-color: #87CEEB; /* 青空の色 */
+  zoom: 1; /* ズームを無効にする */
 }
 
 #game-container {
