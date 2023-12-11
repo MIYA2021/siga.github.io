@@ -39,9 +39,11 @@ dropButton.addEventListener('click', () => {
   // ボタンで落とす
   const fallingObject = fallingObjectContainer.lastChild;
   if (fallingObject) {
-    fallingObject.style.animation = 'fall 2s linear forwards';
     // 新しいオブジェクトを作成
     createFallingObject();
+
+    // ボタンでアニメーションを開始
+    fallingObject.style.animation = 'fall 2s linear forwards';
   }
 });
 
@@ -73,9 +75,11 @@ document.addEventListener('touchend', () => {
   // ボタンで落とす
   const fallingObject = fallingObjectContainer.lastChild;
   if (fallingObject) {
-    fallingObject.style.animation = 'fall 2s linear forwards';
     // 新しいオブジェクトを作成
     createFallingObject();
+
+    // ボタンでアニメーションを開始
+    fallingObject.style.animation = 'fall 2s linear forwards';
   }
 });
 
