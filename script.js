@@ -41,9 +41,12 @@ dropButton.addEventListener('click', () => {
   if (fallingObject) {
     // 新しいオブジェクトを作成
     createFallingObject();
-
-    // ボタンでアニメーションを開始
-    fallingObject.style.animation = 'fall 2s linear forwards';
+    try {
+      // ボタンでアニメーションを開始
+      fallingObject.style.animation = 'fall 2s linear forwards';
+    } catch (error) {
+      console.error("Error in dropButton click:", error);
+    }
   }
 });
 
@@ -77,9 +80,12 @@ document.addEventListener('touchend', () => {
   if (fallingObject) {
     // 新しいオブジェクトを作成
     createFallingObject();
-
-    // ボタンでアニメーションを開始
-    fallingObject.style.animation = 'fall 2s linear forwards';
+    try {
+      // ボタンでアニメーションを開始
+      fallingObject.style.animation = 'fall 2s linear forwards';
+    } catch (error) {
+      console.error("Error in touchend:", error);
+    }
   }
 });
 
