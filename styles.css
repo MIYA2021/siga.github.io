@@ -1,12 +1,11 @@
 body {
-  /* 画面中央に配置するためのスタイル */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden; /* 画面外の要素を表示しない */
-  background-color: #87CEEB; /* 青空の色 */
+  overflow: hidden;
+  background-color: #87CEEB;
 }
 
 #game-container {
@@ -16,7 +15,10 @@ body {
 }
 
 .background {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -33,21 +35,21 @@ body {
   object-fit: cover;
   position: absolute;
   bottom: 30%;
-  z-index: 2; /* 土台を前面に表示 */
+  z-index: 2;
 }
 
 .falling-object {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: -100px; /* 初期位置を画面外に設定 */
+  top: -100px;
   animation: fall 2s linear forwards;
-  z-index: 1; /* 落下するオブジェクトを背景よりも奥に表示 */
+  z-index: 1;
 }
 
 @keyframes fall {
   to {
-    top: calc(100% - 100px); /* 画面底辺から100px上の位置まで落とす */
+    top: calc(100% - 100px);
   }
 }
 
@@ -58,34 +60,34 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   border: none;
-  border-radius: 25px; /* 角丸 */
+  border-radius: 25px;
   transition: background-color 0.3s ease;
 }
 
 #rotate-button {
   bottom: 20px;
-  right: 20px; /* left から right に変更 */
-  background-color: #77aaff; /* ボタンの背景色 */
-  color: #fff; /* ボタンの文字色 */
+  right: 20px;
+  background-color: #77aaff;
+  color: #fff;
 }
 
 #drop-button {
   bottom: 80px;
-  right: 20px; /* left から right に変更 */
-  background-color: #ff77aa; /* ボタンの背景色 */
-  color: #fff; /* ボタンの文字色 */
+  right: 20px;
+  background-color: #ff77aa;
+  color: #fff;
 }
 
 #rotate-button:hover,
 #drop-button:hover {
-  background-color: #ff5599; /* ホバー時の背景色 */
+  background-color: #ff5599;
 }
 
 #falling-object-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 50px; /* fixed要素の幅を指定 */
-  height: 50%;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
