@@ -78,14 +78,16 @@ document.addEventListener('touchend', () => {
   // ボタンで落とす
   const fallingObject = fallingObjectContainer.lastChild;
   if (fallingObject) {
-    // 新しいオブジェクトを作成
-    createFallingObject();
-    try {
-      // ボタンでアニメーションを開始
-      fallingObject.style.animation = 'fall 2s linear forwards';
-    } catch (error) {
-      console.error("Error in touchend:", error);
-    }
+    document.addEventListener('touchend', () => {
+      // 新しいオブジェクトを作成
+      const fallingObject = createFallingObject();
+      try {
+        // ボタンでアニメーションを開始
+        fallingObject.style.animation = 'fall 2s linear forwards';
+      } catch (error) {
+        console.error("Error in touchend:", error);
+      }
+    });
   }
 });
 
