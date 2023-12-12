@@ -63,4 +63,8 @@ document.addEventListener('touchmove', (e) => {
   }
 });
 
-document.addEventListener
+document.addEventListener('touchend', () => {
+  const fallingObject = fallingObjectContainer.lastChild;
+  if (fallingObject) {
+  }
+});
